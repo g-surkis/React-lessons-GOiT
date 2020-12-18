@@ -1,0 +1,12 @@
+export { default as Footer } from './Footer/Footer';
+export { default as Header } from './Header/Header';
+export { default as MainLayout } from './Layout/MainLayout';
+export { default as CustomBlock } from './CustomBlock/CustomBlock';
+export { default as CustomSection } from './CustomSection/CustomSection';
+export { default as Sidebar } from './Sidebar/Sidebar';
+export { default as ErrorBoundary } from './ErrorBoundary/ErrorBoundary';
+export { default as Menu } from './Menu/Menu';
+export { default as ComicsList } from './ComicsList/ComicsList';
+export { default as RestorantCategories } from './RestorantCategories/RestorantCategories';
+export { default as Restaurants } from './Restaurants/Restaurants';
+export { default as Restaurant } from './Restaurant/Restaurant';

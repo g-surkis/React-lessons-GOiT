@@ -1,0 +1,17 @@
+.restaurant{
+    padding: 10px;
+    border: 1px solid darkcyan;
+    margin: 3px;
+    display: flex;
+    text-align: start;
+    width: 300px;
+
+    img{
+        margin-right: 5px;
+        width: 100px;
+    }
+
+    .name{
+        font-weight: bold;
+    }
+}

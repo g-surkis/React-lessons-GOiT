@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+      "target": "es2018",
+      "module": "commonjs",
+      "allowSyntheticDefaultImports": true,
+      "baseUrl": "./src/",
+      "paths": {
+        "Components/*": ["Components/*"]
+      },
+      "checkJs": true,
+      "jsx": "preserve"
+    },
+    "exclude": ["node_modules", "bild", ".history"]
+}

@@ -1,0 +1,19 @@
+.layout{
+
+    .main{
+        height: 100%;
+        min-height: 85vh;
+        .left-sidebar{
+            width: 200px;         
+            border-right: 2px solid darkcyan;
+        }
+        .main-content{
+            flex-grow: 1;
+        }
+        .right-sidebar{
+            width: 150px;
+            border-left: 2px solid darkcyan;
+        }
+    }
+   
+}
