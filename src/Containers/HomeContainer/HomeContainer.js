@@ -2,8 +2,11 @@
 /* eslint-disable no-console */
 /* eslint-disable react/prefer-stateless-function */
 import React, { Component } from 'react';
-import { MainLayout, RestorantCategories, Restaurants } from 'Components';
+import { MainLayout, RestaurantCategories, Restaurants } from 'Components';
 import { api } from 'Utils/apiHelpers';
+import withLog from 'Utils/withLogs';
+
+const LoggedRestorants = withLog(Restaurants);
 
 class HomeContainer extends Component {
   constructor(props) {
@@ -27,7 +30,6 @@ class HomeContainer extends Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    console.log('componentDidUpdate: ');
     const { activeCategory } = this.state;
 
     if (prevState.activeCategory.name !== activeCategory.name) {
@@ -81,7 +83,7 @@ class HomeContainer extends Component {
       <MainLayout
         content={(
           <div>
-            <Restaurants
+            <LoggedRestorants
               list={listContent}
               onSelect={this.onSelectRestaurant}
               selected={selected}
@@ -91,7 +93,7 @@ class HomeContainer extends Component {
         leftSidebar={(
           <div>
             <h4>Categories</h4>
-            <RestorantCategories
+            <RestaurantCategories
               list={categories}
               onCategoryChoose={this.onCategoryChoose}
               active={activeCategory.name}

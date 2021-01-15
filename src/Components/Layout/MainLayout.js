@@ -1,6 +1,6 @@
-/* eslint-disable react/prop-types */
 /* eslint-disable react/destructuring-assignment */
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Header, Footer, Menu } from 'Components';
 import './MainLayout.scss';
 
@@ -24,7 +24,14 @@ const Layout = ({ leftSidebar = null, rightSidebar = null, content }) => (
 );
 
 Layout.propTypes = {
-
+  leftSidebar: PropTypes.element,
+  rightSidebar: PropTypes.element,
+  content: PropTypes.element,
+};
+Layout.defaultProps = {
+  leftSidebar: null,
+  rightSidebar: null,
+  content: null,
 };
 
 export default Layout;

@@ -1,12 +1,13 @@
-/* eslint-disable react/prop-types */
 /* eslint-disable no-console */
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Restaurant } from 'Components';
+import { restaurantType } from '../../types';
 import './Restaurants.scss';
 
 function Restaurants({ list = [], selected, onSelect }) {
   if (list.length) {
-    console.log('list: ', list[0]);
+    // console.log('list: ', list[0]);
   }
 
   return (
@@ -16,6 +17,7 @@ function Restaurants({ list = [], selected, onSelect }) {
           item={el}
           onSelect={onSelect}
           selected={selected}
+          key={el.restaurant.name}
         />
       ))}
     </div>
@@ -23,3 +25,13 @@ function Restaurants({ list = [], selected, onSelect }) {
 }
 
 export default Restaurants;
+
+Restaurants.propTypes = {
+  list: PropTypes.arrayOf(restaurantType),
+  onSelect: PropTypes.func.isRequired,
+  selected: PropTypes.arrayOf(PropTypes.string),
+};
+Restaurants.defaultProps = {
+  list: [],
+  selected: [],
+};

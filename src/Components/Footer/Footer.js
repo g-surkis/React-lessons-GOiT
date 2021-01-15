@@ -10,13 +10,9 @@ const Footer = () => (
     <span>
       &#169;
       {new Date().getFullYear()}
-      Lviv
+      Lviv, Ukraine
     </span>
   </div>
 );
-
-Footer.propTypes = {
-
-};
 
 export default Footer;

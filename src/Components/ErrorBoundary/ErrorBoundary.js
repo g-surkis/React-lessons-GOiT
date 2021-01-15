@@ -1,8 +1,9 @@
 /* eslint-disable no-console */
-/* eslint-disable react/prop-types */
+
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/state-in-constructor */
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class ErrorBoundary extends React.Component {
     state = { hasError: false };
@@ -30,3 +31,7 @@ class ErrorBoundary extends React.Component {
 }
 
 export default ErrorBoundary;
+
+ErrorBoundary.propTypes = {
+  children: PropTypes.element.isRequired,
+};

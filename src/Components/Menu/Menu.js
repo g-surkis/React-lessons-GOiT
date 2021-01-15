@@ -9,7 +9,9 @@ function Menu() {
       Menu
       <Link to="/">Home</Link>
       <Link to="/comics">Comics</Link>
+      <Link to="/product">Product</Link>
       <Link to="/contact">Contact</Link>
+      <Link to="/animation">Animation</Link>
     </div>
   );
 }

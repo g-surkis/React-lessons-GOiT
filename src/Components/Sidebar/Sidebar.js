@@ -1,12 +1,7 @@
-/* eslint-disable react/no-did-update-set-state */
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable no-console */
-/* eslint-disable react/no-unused-state */
 /* eslint-disable no-unused-vars */
-/* eslint-disable react/require-default-props */
-/* eslint-disable react/no-unused-prop-types */
+/* eslint-disable no-console */
 import React from 'react';
-import { CustomBlock } from 'Components';
+// import { CustomBlock } from 'Components';
 import PropTypes from 'prop-types';
 
 import './Sidebar.scss';
@@ -14,7 +9,6 @@ import './Sidebar.scss';
 class Sidebar extends React.Component {
   constructor(props) {
     super(props);
-    console.log('constructor: ');
     this.state = {
       name: 'Robert',
       age: 42,
@@ -25,7 +19,6 @@ class Sidebar extends React.Component {
   }
 
   static getDerivedStateFromProps(nextProps, prevState) {
-    console.log('getDerivedStateFromProps: ');
     if (nextProps.age > prevState.age) {
       const { name, age } = nextProps;
       return {
@@ -38,8 +31,6 @@ class Sidebar extends React.Component {
   }
 
   componentDidMount() {
-    console.log('componentDidMount: ');
-
     window.addEventListener('resize', this.resizeHandler);
   }
 
@@ -62,12 +53,10 @@ class Sidebar extends React.Component {
   // }
 
   componentWillUnmount() {
-    console.log('componentWillUnmount: ');
-
     window.removeEventListener('resize', this.resizeHandler);
   }
 
-  resizeHandler = (event) => {
+  resizeHandler = () => {
     console.log(window.innerWidth);
   }
 
@@ -77,7 +66,6 @@ class Sidebar extends React.Component {
   }
 
   render() {
-    console.log('render: ');
     const { optionalArrayOf, city } = this.props;
     const { name, age, data } = this.state;
 
@@ -118,9 +106,3 @@ Sidebar.defaultProps = {
 };
 
 export default Sidebar;
-
-// { /* {optionalArrayOf.length ? optionalArrayOf.map((el) => (
-//           <div key={el.optionalProperty}>
-//             {el.name}
-//           </div>
-//         )) : null} */ }
